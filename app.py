@@ -14,5 +14,15 @@ def get_mock_data():
     }
     return jsonify(mock_response), 200
 
+@app.route('/api/v1/mock-data2', methods=['GET'])
+def get_mock_data2():
+    mock_response = {
+        "status": "success",
+        "data": {
+            "message": "Hello from inside VS Code!"
+        }
+    }
+    return jsonify(mock_response), 200
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=6000)
